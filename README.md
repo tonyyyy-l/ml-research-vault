@@ -2,7 +2,7 @@
 
 ## 致谢
 
-> 中文：本项目基于 [juliye2025/evil-read-arxiv](https://github.com/juliye2025/evil-read-arxiv) 构建，并根据个人的 ML 论文阅读流程，对工作流、知识库结构和 agent 指令做了一些个性化调整。
+> 本项目基于 [juliye2025/evil-read-arxiv](https://github.com/juliye2025/evil-read-arxiv) 构建，并根据个人的 ML 论文阅读流程，对工作流、知识库结构和 agent 指令做了一些个性化调整。
 
 这是一个基于 Obsidian 笔记库的 ML 论文学习工作区。它把论文笔记、每日论文推荐、知识图谱数据，以及面向 Claude Code/Codex 的学习助手规则放在同一个仓库里，方便持续积累和迁移。
 
