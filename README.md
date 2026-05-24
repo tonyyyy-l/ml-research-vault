@@ -25,6 +25,7 @@
     ├── 20_Research/
     │   ├── Papers/           # 按领域分类的论文深度笔记
     │   └── PaperGraph/       # 论文关系图谱数据
+    ├── 30_QA/                # 半自动沉淀的 ML 问答笔记
     └── 99_System/Config/     # 研究兴趣和工作流配置
 ```
 
@@ -50,6 +51,7 @@ export OBSIDIAN_VAULT_PATH="$PWD/Research Vault"
 - `paper-search`: 在已有论文笔记中搜索相关内容。
 - `extract-paper-images`: 从 arXiv 源码包或 PDF 中提取论文图片。
 - `ml-tutor`: 先搜索 `Research Vault`，基于你的论文笔记回答 ML 概念、方法和论文关系问题；笔记不够时再补充外部知识。
+- `qa-capture`: 半自动沉淀高价值问答。回答后先询问是否保存，确认后再整理进 `Research Vault/30_QA/`。
 - `ml-note`: 当你总结新理解时，自动寻找相关论文笔记，只追加到合适 section，不覆盖原文。
 - `ml-roadmap`: 当你想系统学习一个方向时，扫描现有笔记，按时间和依赖关系规划不超过 10 篇论文的阅读路线，并标出缺失论文。
 

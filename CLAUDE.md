@@ -10,6 +10,7 @@ Research Vault 路径解析顺序：
 - `5_Daily/` - 每日论文推荐笔记
 - `20_Research/Papers/` - 论文深度分析笔记，按领域分类（LLM, Computer-Vision, Agents, Deep-Learning, Reinforcement-Learning, Machine-Learning）
 - `20_Research/PaperGraph/` - 知识图谱数据
+- `30_QA/` - 半自动沉淀的 ML 问答和解释笔记
 - `99_System/Config/` - 配置文件
 
 ## 关键约定
@@ -75,12 +76,62 @@ Research Vault 路径解析顺序：
 3. 标注 vault 缺口（该读但还没有笔记的论文，给出 arXiv ID）
 4. 输出不超过 10 篇的路线图，每篇标注"重点看什么"和"看完应该能做什么"
 
-### 三者联动
+### qa-capture：半自动触发
+
+**当一次 ML 问答有长期复用价值时，不自动写入，先询问用户是否保存。**
+
+触发条件：
+- 用户问了概念解释、机制原理、论文关系、代码/公式直觉等可复用问题
+- 回答中形成了清晰的"问题 → 简短答案 → 关键理解 → 相关笔记"结构
+- 用户明确说"记一下""保存到知识库""沉淀一下"
+
+响应流程：
+1. 回答问题时仍然先走 `ml-tutor`：先搜 vault，再区分笔记内容和补充知识
+2. 回答后判断是否值得沉淀
+3. 值得沉淀时询问："要不要把这个问答整理进 `30_QA/`？"
+4. 用户确认后，创建或更新 `30_QA/` 下的结构化 QA 笔记
+5. 不保存聊天原文，只保存整理后的知识条目
+
+建议笔记结构：
+
+```markdown
+---
+type: qa
+date: YYYY-MM-DD
+topic: Topic
+tags: [Domain, Concept]
+related:
+  - "[[20_Research/Papers/...|Paper Title]]"
+---
+
+# 问题标题
+
+## 问题
+
+[用户问题的精炼版本]
+
+## 简短答案
+
+[1-3 句话]
+
+## 关键理解
+
+- [关键点 1]
+- [关键点 2]
+
+## 相关笔记
+
+- [[路径|显示名]]
+```
+
+### 四者联动
 
 ```
 你想学 Attention → ml-roadmap 规划路线
         ↓
     按路线读论文，遇到不懂的 → ml-tutor 基于笔记解答
+        ↓
+    有价值的问题 → qa-capture 询问是否保存到 30_QA
         ↓
     读懂了，总结知识点 → ml-note 自动写入笔记
         ↓

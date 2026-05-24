@@ -52,6 +52,8 @@ Research Vault/20_Research/Papers/*
 !Research Vault/20_Research/Papers/.gitkeep
 Research Vault/20_Research/PaperGraph/*
 !Research Vault/20_Research/PaperGraph/.gitkeep
+Research Vault/30_QA/*
+!Research Vault/30_QA/.gitkeep
 
 # Avoid uploading full papers or extracted PDF artifacts by default.
 # Keep markdown notes and selected images in the vault.
