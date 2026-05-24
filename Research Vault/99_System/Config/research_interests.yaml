@@ -1,0 +1,38 @@
+language: zh
+mode: beginner
+papers_dir: 20_Research/Papers
+daily_dir: 5_Daily
+
+# 入门模式 (beginner): 不按研究方向过滤论文
+# 评分: 热门度(55%) + 质量(35%) + 新近性(10%)
+# 如需切换到研究方向模式，改为 mode: normal
+
+research_domains:
+  机器学习与深度学习:
+    keywords:
+      - machine learning
+      - deep learning
+      - neural network
+      - supervised learning
+      - unsupervised learning
+      - representation learning
+      - transfer learning
+      - self-supervised learning
+      - optimization
+      - gradient descent
+      - generalization
+      - federated learning
+      - contrastive learning
+      - transformer
+      - attention mechanism
+      - foundation model
+      - pre-training
+      - fine-tuning
+    arxiv_categories:
+      - cs.LG
+      - cs.AI
+      - stat.ML
+    priority: 5
+
+excluded_keywords:
+  - workshop

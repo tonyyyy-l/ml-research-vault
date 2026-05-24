@@ -1,0 +1,65 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Editor and local state
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs and caches
+*.log
+.cache/
+tmp/
+temp/
+
+# Obsidian local workspace state
+Research Vault/.obsidian/workspace*.json
+Research Vault/.obsidian/cache/
+Research Vault/.obsidian/plugins/
+Research Vault/.obsidian/trash/
+Research Vault/.trash/
+
+# Private vault content
+Research Vault/5_Daily/*
+!Research Vault/5_Daily/.gitkeep
+Research Vault/20_Research/Papers/*
+!Research Vault/20_Research/Papers/.gitkeep
+Research Vault/20_Research/PaperGraph/*
+!Research Vault/20_Research/PaperGraph/.gitkeep
+
+# Avoid uploading full papers or extracted PDF artifacts by default.
+# Keep markdown notes and selected images in the vault.
+Research Vault/**/*.pdf
+
+# Skill runtime outputs
+skills/start-my-day/arxiv_filtered.json
+skills/start-my-day/existing_notes_index.json
+skills/extract-paper-images/scripts/--domain/
+skills/extract-paper-images/scripts/Computer-Vision
+skills/extract-paper-images/scripts/LLM
